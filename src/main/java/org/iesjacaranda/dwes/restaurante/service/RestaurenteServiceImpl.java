@@ -21,10 +21,10 @@ public class RestaurenteServiceImpl implements RestaurenteService {
 
 	@Override
 	public RestaurenteDTO comprobarRestaurante(RestaurenteDTO restauranteDTO) {
-		Restaurente res = new Restaurente(restauranteDTO.getCorroe(), restauranteDTO.getClave());
-		Restaurente resObt = restauranteRepository.findBycorroeAndClave(res.getCorroe(), res.getClave());
+		Restaurente res = new Restaurente(restauranteDTO.getCorreo(), restauranteDTO.getClave());
+		Restaurente resObt = restauranteRepository.findBycorroeAndClave(res.getCorreo(), res.getClave());
 		if ( resObt != null ) {
-			return  new RestaurenteDTO(resObt.getCodRes(), resObt.getCorroe(), resObt.getClave(), resObt.getPais(), resObt.getCp(), resObt.getCiudad(), resObt.getDireccion());
+			return  new RestaurenteDTO(resObt.getCodRes(), resObt.getCorreo(), resObt.getClave(), resObt.getPais(), resObt.getCp(), resObt.getCiudad(), resObt.getDireccion());
 		}
 		return null;
 	}

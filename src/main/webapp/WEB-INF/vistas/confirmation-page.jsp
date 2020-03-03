@@ -19,6 +19,6 @@
 	
 	 <% RestaurenteDTO usuarioActual = (RestaurenteDTO) session.getAttribute("usuarioActual");%>
 			
-            Welcome <%= usuarioActual.getCorroe()%>
+            Welcome <%= usuarioActual.getCorreo()%>
 </body>
 </html>

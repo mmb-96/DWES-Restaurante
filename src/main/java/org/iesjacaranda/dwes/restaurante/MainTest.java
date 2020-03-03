@@ -1,17 +1,12 @@
 package org.iesjacaranda.dwes.restaurante;
 
 import java.sql.Date;
-import java.util.List;
 
 import org.iesjacaranda.dwes.restaurante.dto.CarritoDTO;
 import org.iesjacaranda.dwes.restaurante.dto.CategoriaDTO;
-import org.iesjacaranda.dwes.restaurante.dto.PedidoProductoDTO;
 import org.iesjacaranda.dwes.restaurante.dto.ProductoDTO;
 import org.iesjacaranda.dwes.restaurante.entities.Categoria;
-import org.iesjacaranda.dwes.restaurante.entities.Pedido;
-import org.iesjacaranda.dwes.restaurante.entities.PedidoProducto;
 import org.iesjacaranda.dwes.restaurante.entities.Producto;
-import org.iesjacaranda.dwes.restaurante.entities.Restaurente;
 import org.iesjacaranda.dwes.restaurante.respository.CategoriaRepository;
 import org.iesjacaranda.dwes.restaurante.respository.PedidoProductoRepository;
 import org.iesjacaranda.dwes.restaurante.respository.ProductoRepository;
@@ -49,8 +44,8 @@ public class MainTest implements CommandLineRunner {
 //		
 		Date fecha = new Date(2010, 10, 10); 
 		CarritoDTO car = new CarritoDTO();
-		ProductoDTO prod = new ProductoDTO(2,"prueba", "preuba", fecha, 10, 10, new CategoriaDTO("Prueba", "Esto es una prueba CRAK"));
-		ProductoDTO prod2 = new ProductoDTO(3,"ad", "ad", fecha, 1, 1, new CategoriaDTO("Pruebasssa", "Esto es una prueba CRAK"));
+		ProductoDTO prod = new ProductoDTO(2,"prueba", "preuba", 10, 10, new CategoriaDTO("Prueba", "Esto es una prueba CRAK"));
+		ProductoDTO prod2 = new ProductoDTO(3,"ad", "ad", 1, 1, new CategoriaDTO("Pruebasssa", "Esto es una prueba CRAK"));
 
 		car.addCarrito(prod2, 10);
 		System.out.println(car.toString());
@@ -63,7 +58,7 @@ public class MainTest implements CommandLineRunner {
 //		car.addCarrito(prod, 5);
 //		System.out.println(car.toString());
 		
-		proREs.save(new Producto(3, "ad", "ad", fecha, 1, 1, new Categoria(3)));
+		proREs.save(new Producto(3, "ad", "ad", 1, 1, new Categoria(3)));
 		
 //		List<PedidoProductoDTO> calito = car.getCarrito();
 //		for (PedidoProductoDTO cart : calito) {

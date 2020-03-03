@@ -5,7 +5,6 @@ package org.iesjacaranda.dwes.restaurante.entities;
  *
  */
 import java.io.Serializable;
-import java.sql.Date;
 import java.util.Set;
 
 import javax.persistence.Column;
@@ -43,11 +42,7 @@ public class Producto implements Serializable {
 	@NotNull
 	@Column(length = 90)
 	private String descripcion;
-	
-	@NotNull
-	@Column
-	private Date fecha;
-		
+
 	@NotNull
 	@Column
 	private double peso;
@@ -75,17 +70,15 @@ public class Producto implements Serializable {
 	 * @param codProd
 	 * @param nombre
 	 * @param descripcion
-	 * @param fecha
 	 * @param peso
 	 * @param stock
 	 * @param codCat
 	 */
-	public Producto(String nombre, String descripcion, Date fecha, double peso, int stock,
-			Categoria codCat) {
+	public Producto(String nombre, String descripcion, double peso, int stock, Categoria codCat) {
 		super();
 		this.nombre = nombre;
 		this.descripcion = descripcion;
-		this.fecha = fecha;
+
 		this.peso = peso;
 		this.stock = stock;
 		this.codCat = codCat;
@@ -95,18 +88,15 @@ public class Producto implements Serializable {
 	 * @param codProd
 	 * @param nombre
 	 * @param descripcion
-	 * @param fecha
 	 * @param peso
 	 * @param stock
 	 * @param codCat
 	 */
-	public Producto(int codProd, String nombre, String descripcion, Date fecha, double peso, int stock,
-			Categoria codCat) {
+	public Producto(int codProd, String nombre, String descripcion, double peso, int stock,	Categoria codCat) {
 		super();
 		this.codProd = codProd;
 		this.nombre = nombre;
 		this.descripcion = descripcion;
-		this.fecha = fecha;
 		this.peso = peso;
 		this.stock = stock;
 		this.codCat = codCat;
@@ -117,19 +107,16 @@ public class Producto implements Serializable {
 	 * @param codProd
 	 * @param nombre
 	 * @param descripcion
-	 * @param fecha
 	 * @param peso
 	 * @param stock
 	 * @param codCat
 	 * @param pedidoProducto
 	 */
-	public Producto(int codProd, String nombre, String descripcion, Date fecha, double peso, int stock,
-			Categoria codCat, Set<PedidoProducto> pedidoProducto) {
+	public Producto(int codProd, String nombre, String descripcion, double peso, int stock,	Categoria codCat, Set<PedidoProducto> pedidoProducto) {
 		super();
 		this.codProd = codProd;
 		this.nombre = nombre;
 		this.descripcion = descripcion;
-		this.fecha = fecha;
 		this.peso = peso;
 		this.stock = stock;
 		this.codCat = codCat;
@@ -176,20 +163,6 @@ public class Producto implements Serializable {
 	 */
 	public void setDescripcion(String descripcion) {
 		this.descripcion = descripcion;
-	}
-
-	/**
-	 * @return the fecha
-	 */
-	public Date getFecha() {
-		return fecha;
-	}
-
-	/**
-	 * @param fecha the fecha to set
-	 */
-	public void setFecha(Date fecha) {
-		this.fecha = fecha;
 	}
 
 	/**

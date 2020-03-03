@@ -32,7 +32,7 @@ public class Restaurente implements Serializable {
 	
 	@NotNull
 	@Column(length = 90, unique = true)
-	private String corroe;
+	private String correo;
 	
 	@NotNull
 	@Column(length = 45)
@@ -73,11 +73,11 @@ public class Restaurente implements Serializable {
 	
 	
 	/**
-	 * @param corroe
+	 * @param correo
 	 * @param clave
 	 */
-	public Restaurente(String corroe, String clave) {
-		this.corroe = corroe;
+	public Restaurente(String correo, String clave) {
+		this.correo = correo;
 		this.clave = clave;
 
 	}
@@ -92,11 +92,11 @@ public class Restaurente implements Serializable {
 	 * @param direccion
 	 * @param pedido
 	 */
-	public Restaurente(int codRes, String corroe, String clave, String pais, int cp, String ciudad, String direccion,
+	public Restaurente(int codRes, String correo, String clave, String pais, int cp, String ciudad, String direccion,
 			Set<Pedido> pedido) {
 		super();
 		this.codRes = codRes;
-		this.corroe = corroe;
+		this.correo = correo;
 		this.clave = clave;
 		this.pais = pais;
 		this.cp = cp;
@@ -120,17 +120,17 @@ public class Restaurente implements Serializable {
 	}
 
 	/**
-	 * @return the corroe
+	 * @return the correo
 	 */
-	public String getCorroe() {
-		return corroe;
+	public String getCorreo() {
+		return correo;
 	}
 
 	/**
-	 * @param corroe the corroe to set
+	 * @param corroe the correo to set
 	 */
-	public void setCorroe(String corroe) {
-		this.corroe = corroe;
+	public void setCorreo(String correo) {
+		this.correo = correo;
 	}
 
 	/**

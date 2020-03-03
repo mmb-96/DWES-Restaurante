@@ -1,13 +1,6 @@
 package org.iesjacaranda.dwes.restaurante.dto;
 
-/**
- * @author Manuel Melero
- *
- */
-import java.sql.Date;
 import java.util.Set;
-
-import org.iesjacaranda.dwes.restaurante.entities.Categoria;
 
 public class ProductoDTO {
 
@@ -16,8 +9,6 @@ public class ProductoDTO {
 	private String nombre;
 
 	private String descripcion;
-
-	private Date fecha;
 
 	private double peso;
 
@@ -38,17 +29,15 @@ public class ProductoDTO {
 	 * @param codProd
 	 * @param nombre
 	 * @param descripcion
-	 * @param fecha
 	 * @param peso
 	 * @param stock
 	 * @param codCat
 	 */
-	public ProductoDTO(String nombre, String descripcion, Date fecha, double peso, int stock,
+	public ProductoDTO(String nombre, String descripcion, double peso, int stock,
 			CategoriaDTO codCat) {
 		super();
 		this.nombre = nombre;
 		this.descripcion = descripcion;
-		this.fecha = fecha;
 		this.peso = peso;
 		this.stock = stock;
 		this.codCat = codCat;
@@ -71,41 +60,20 @@ public class ProductoDTO {
 
 	}
 	
-	/**
-	 * @param codPro
-	 * @param nombre
-	 * @param descripcion
-	 * @param fecha
-	 * @param peso
-	 * @param stock
-	 */
-	public ProductoDTO(int codPro, String nombre, String descripcion, Date fecha, double peso, int stock) {
-		super();
-		this.codPro = codPro;
-		this.nombre = nombre;
-		this.descripcion = descripcion;
-		this.fecha = fecha;
-		this.peso = peso;
-		this.stock = stock;
-
-	}
 
 	/**
 	 * @param codPro
 	 * @param nombre
 	 * @param descripcion
-	 * @param fecha
 	 * @param peso
 	 * @param stock
 	 * @param codCat
 	 */
-	public ProductoDTO(int codPro, String nombre, String descripcion, Date fecha, double peso, int stock,
-			CategoriaDTO codCat) {
+	public ProductoDTO(int codPro, String nombre, String descripcion, double peso, int stock, CategoriaDTO codCat) {
 		super();
 		this.codPro = codPro;
 		this.nombre = nombre;
 		this.descripcion = descripcion;
-		this.fecha = fecha;
 		this.peso = peso;
 		this.stock = stock;
 		this.codCat = codCat;
@@ -115,19 +83,16 @@ public class ProductoDTO {
 	 * @param codPro
 	 * @param nombre
 	 * @param descripcion
-	 * @param fecha
 	 * @param peso
 	 * @param stock
 	 * @param codCat
 	 * @param pedidoProducto
 	 */
-	public ProductoDTO(int codPro, String nombre, String descripcion, Date fecha, double peso, int stock,
-			CategoriaDTO codCat, Set<PedidoProductoDTO> pedidoProducto) {
+	public ProductoDTO(int codPro, String nombre, String descripcion, double peso, int stock, CategoriaDTO codCat, Set<PedidoProductoDTO> pedidoProducto) {
 		super();
 		this.codPro = codPro;
 		this.nombre = nombre;
 		this.descripcion = descripcion;
-		this.fecha = fecha;
 		this.peso = peso;
 		this.stock = stock;
 		this.codCat = codCat;
@@ -175,21 +140,7 @@ public class ProductoDTO {
 	public void setDescripcion(String descripcion) {
 		this.descripcion = descripcion;
 	}
-
-	/**
-	 * @return the fecha
-	 */
-	public Date getFecha() {
-		return fecha;
-	}
-
-	/**
-	 * @param fecha the fecha to set
-	 */
-	public void setFecha(Date fecha) {
-		this.fecha = fecha;
-	}
-
+	
 	/**
 	 * @return the peso
 	 */
@@ -248,8 +199,7 @@ public class ProductoDTO {
 
 	@Override
 	public String toString() {
-		return "ProductoDTO [codPro=" + codPro + ", nombre=" + nombre + ", descripcion=" + descripcion + ", fecha="
-				+ fecha + ", peso=" + peso + ", stock=" + stock + "]";
+		return "ProductoDTO [codPro=" + codPro + ", nombre=" + nombre + ", descripcion=" + descripcion + ", peso=" + peso + ", stock=" + stock + "]";
 	}
 	
 	

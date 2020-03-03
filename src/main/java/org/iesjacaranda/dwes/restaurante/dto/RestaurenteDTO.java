@@ -11,7 +11,7 @@ public class RestaurenteDTO {
 
 	private int codRes;
 	
-	private String corroe;
+	private String correo;
 	
 	private String clave;
 
@@ -33,11 +33,11 @@ public class RestaurenteDTO {
 	}
 	
 	/**
-	 * @param corroe
+	 * @param correo
 	 * @param clave
 	 */
-	public RestaurenteDTO(String corroe, String clave) {
-		this.corroe = corroe;
+	public RestaurenteDTO(String correo, String clave) {
+		this.correo = correo;
 		this.clave = clave;
 
 	}
@@ -52,16 +52,16 @@ public class RestaurenteDTO {
 	
 	/**
 	 * @param codRes
-	 * @param corroe
+	 * @param correo
 	 * @param clave
 	 * @param pais
 	 * @param cp
 	 * @param ciudad
 	 * @param direccion
 	 */
-	public RestaurenteDTO(int codRes, String corroe, String clave, String pais, int cp, String ciudad, String direccion) {
+	public RestaurenteDTO(int codRes, String correo, String clave, String pais, int cp, String ciudad, String direccion) {
 		this.codRes = codRes;
-		this.corroe = corroe;
+		this.correo = correo;
 		this.clave = clave;
 		this.pais = pais;
 		this.cp = cp;
@@ -71,7 +71,7 @@ public class RestaurenteDTO {
 
 	/**
 	 * @param codRes
-	 * @param corroe
+	 * @param correo
 	 * @param clave
 	 * @param pais
 	 * @param cp
@@ -79,11 +79,11 @@ public class RestaurenteDTO {
 	 * @param direccion
 	 * @param pedido
 	 */
-	public RestaurenteDTO(int codRes, String corroe, String clave, String pais, int cp, String ciudad, String direccion,
+	public RestaurenteDTO(int codRes, String correo, String clave, String pais, int cp, String ciudad, String direccion,
 			Set<PedidoDTO> pedido) {
 		super();
 		this.codRes = codRes;
-		this.corroe = corroe;
+		this.correo = correo;
 		this.clave = clave;
 		this.pais = pais;
 		this.cp = cp;
@@ -109,15 +109,14 @@ public class RestaurenteDTO {
 	/**
 	 * @return the corroe
 	 */
-	public String getCorroe() {
-		return corroe;
+	public String getCorreo() {
+		return correo;
 	}
 
 	/**
-	 * @param corroe the corroe to set
 	 */
-	public void setCorroe(String corroe) {
-		this.corroe = corroe;
+	public void setCorreo(String correo) {
+		this.correo = correo;
 	}
 
 	/**

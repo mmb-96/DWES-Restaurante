@@ -27,7 +27,7 @@ public class ProductoServiceImpl implements ProductoService {
 		List<Producto> prod = productoRepository.findAllBycodCat(cat);
 		List<ProductoDTO> productoDTO = new ArrayList<ProductoDTO>();
 		for (Producto auxProd : prod ) {
-			productoDTO.add(new ProductoDTO(auxProd.getCodProd(),  auxProd.getNombre(), auxProd.getDescripcion(),  auxProd.getFecha(), auxProd.getPeso(), auxProd.getStock()));
+			productoDTO.add(new ProductoDTO(auxProd.getCodProd(),  auxProd.getNombre(), auxProd.getDescripcion(), auxProd.getPeso(), auxProd.getStock()));
 		}
 		return productoDTO;
 	}
