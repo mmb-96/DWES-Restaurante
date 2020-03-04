@@ -5,20 +5,25 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Categoria - Pedidos Restaurante</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
 <body>
-	<p>Your reservation is confirmed successfully. Please, re-check the details.</p>   
-	 <br>
+	<% RestaurenteDTO usuarioActual = (RestaurenteDTO) session.getAttribute("usuarioActual");%>
+	<%= usuarioActual.getCorreo()%>
+
+	<br>
+	<br>
+	<a href="categorias">Home</a>
+	<a href="verCarrito">Ver carrito</a>
+	<a href="cerrarSesion">Cerrar Sesión</a>
+	<br>
+	<br>
 	 <ul>
 		 <c:forEach items="${ categoria }" var="cat">
 			<a href="obtenerProducto?id=${ cat.codCat }&nombre=${ cat.nombre }&descripcion=${cat.descripcion}"><li>${ cat.nombre }</li></a>
 		 </c:forEach>
 	  </ul>
-	  <br>  
-	
-	 <% RestaurenteDTO usuarioActual = (RestaurenteDTO) session.getAttribute("usuarioActual");%>
-			
-            Welcome <%= usuarioActual.getCorreo()%>
+	  <br>
 </body>
 </html>

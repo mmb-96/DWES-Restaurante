@@ -4,11 +4,11 @@
 package org.iesjacaranda.dwes.restaurante.service;
 
 /**
- * @author manu
+ * @author Manuel Melero
  *
  */
 public interface EmailService {
 
-    public void sendSimpleMessage();
+    void enviarCorreo(String destinatario);
     
 }

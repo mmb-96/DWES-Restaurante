@@ -6,7 +6,7 @@ package org.iesjacaranda.dwes.restaurante.dto;
 import java.util.ArrayList;
 
 /**
- * @author Manu
+ * @author Manuel Melero
  *
  */
 public class CarritoDTO {

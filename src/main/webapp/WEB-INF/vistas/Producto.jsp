@@ -4,10 +4,20 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Productos - Pedidos Restaurante</title>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
 <body>
+	<% RestaurenteDTO usuarioActual = (RestaurenteDTO) session.getAttribute("usuarioActual");%>
+	<%= usuarioActual.getCorreo()%>
+
+	<br>
+	<br>
+	<a href="categorias">Home</a>
+	<a href="verCarrito">Ver carrito</a>
+	<a href="cerrarSesion">Cerrar Sesión</a>
+	<br>
+	<br>
 	<h2>${categoria.nombre }</h2>
 
 	<h2>${categoria.descripcion }</h2>
@@ -44,14 +54,5 @@
 			</tbody>
 		</table>
 	</div>
-	
-	 <% RestaurenteDTO usuarioActual = (RestaurenteDTO) session.getAttribute("usuarioActual");%>
-			
-     Welcome <%= usuarioActual.getCorreo()%>
-
-
-	<br>
-	<br>
-	<a href="verCarrito">Ver carrito</a>
 </body>
 </html>

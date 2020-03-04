@@ -72,7 +72,6 @@ public class Pedido implements Serializable {
 	}
 
 	/**
-	 * @param codPed
 	 * @param fecha
 	 * @param enviado
 	 * @param codRes

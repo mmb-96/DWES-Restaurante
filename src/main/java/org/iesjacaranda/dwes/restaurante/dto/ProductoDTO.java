@@ -1,5 +1,9 @@
 package org.iesjacaranda.dwes.restaurante.dto;
 
+/**
+ * @author Manuel Melero
+ *
+ */
 import java.util.Set;
 
 public class ProductoDTO {

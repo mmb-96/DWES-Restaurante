@@ -48,6 +48,17 @@ public class PedidoProducto implements Serializable{
 	public PedidoProducto() {
 		super();
 	}
+	
+	/**
+	 * @param codPed
+	 * @param codProd
+	 * @param unidades
+	 */
+	public PedidoProducto(Pedido codPed, Producto codProd, int unidades) {
+		this.codPed = codPed;
+		this.codProducto = codProd;
+		this.unidades = unidades;
+	}
 
 	/**
 	 * @param codPedProd
