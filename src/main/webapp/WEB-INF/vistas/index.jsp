@@ -8,7 +8,7 @@
 </head>
 <body>
 <form:form action="submitForm" modelAttribute="restaurante">  
-        Correo: <form:input path="corroe" />         
+        Correo: <form:input path="correo" />         
         <br><br>  
         Clave: <form:input path="clave" />  
         <br><br>  

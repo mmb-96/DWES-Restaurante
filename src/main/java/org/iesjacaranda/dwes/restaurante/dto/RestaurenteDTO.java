@@ -107,7 +107,7 @@ public class RestaurenteDTO {
 	}
 
 	/**
-	 * @return the corroe
+	 * @return the correo
 	 */
 	public String getCorreo() {
 		return correo;

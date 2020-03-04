@@ -11,6 +11,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface RestaurenteRepository extends JpaRepository<Restaurente, Integer> {
 	
-	public Restaurente findBycorroeAndClave(String corroe, String clave);
+	public Restaurente findBycorreoAndClave(String correo, String clave);
 
 }

@@ -84,7 +84,7 @@ public class Restaurente implements Serializable {
 
 	/**
 	 * @param codRes
-	 * @param corroe
+	 * @param correo
 	 * @param clave
 	 * @param pais
 	 * @param cp
@@ -127,7 +127,7 @@ public class Restaurente implements Serializable {
 	}
 
 	/**
-	 * @param corroe the correo to set
+	 * @param correo the correo to set
 	 */
 	public void setCorreo(String correo) {
 		this.correo = correo;
