@@ -51,12 +51,12 @@ public class Producto implements Serializable {
 	@Column
 	private int stock;
 	
-	@Cascade(CascadeType.ALL)
+	@Cascade(CascadeType.MERGE)
 	@ManyToOne
-	@JoinColumn(name = "codCat", referencedColumnName = "codCat")
+	@JoinColumn(referencedColumnName = "codCat")
 	private Categoria codCat;
 	
-	@OneToMany(mappedBy="codProd")
+	@OneToMany(mappedBy="codProducto")
 	private Set<PedidoProducto> pedidoProducto;
 
 	/**
@@ -72,13 +72,26 @@ public class Producto implements Serializable {
 	 * @param descripcion
 	 * @param peso
 	 * @param stock
+	 */
+	public Producto(String nombre, String descripcion, double peso, int stock) {
+		super();
+		this.nombre = nombre;
+		this.descripcion = descripcion;
+		this.peso = peso;
+		this.stock = stock;
+	}
+	
+	/**
+	 * @param nombre
+	 * @param descripcion
+	 * @param peso
+	 * @param stock
 	 * @param codCat
 	 */
 	public Producto(String nombre, String descripcion, double peso, int stock, Categoria codCat) {
 		super();
 		this.nombre = nombre;
 		this.descripcion = descripcion;
-
 		this.peso = peso;
 		this.stock = stock;
 		this.codCat = codCat;
@@ -121,6 +134,11 @@ public class Producto implements Serializable {
 		this.stock = stock;
 		this.codCat = codCat;
 		this.pedidoProducto = pedidoProducto;
+	}
+
+	public Producto(int codPro, Categoria categoria) {
+		this.codProd = codPro;
+		this.codCat = categoria;
 	}
 
 	/**

@@ -33,10 +33,10 @@ public class PedidoProducto implements Serializable{
 	@ManyToOne
 	@JoinColumn(name = "codPed", referencedColumnName = "codPed")
 	private Pedido codPed;
-	
+		
 	@ManyToOne
-	@JoinColumn(name = "codProd", referencedColumnName = "codProd")
-	private Producto codProd;
+	@JoinColumn(name = "codProducto", referencedColumnName = "codProd")
+	private Producto codProducto;
 		
 	@NotNull
 	@Column
@@ -59,7 +59,7 @@ public class PedidoProducto implements Serializable{
 		super();
 		this.codPedProd = codPedProd;
 		this.codPed = codPed;
-		this.codProd = codProd;
+		this.codProducto = codProd;
 		this.unidades = unidades;
 	}
 
@@ -95,14 +95,14 @@ public class PedidoProducto implements Serializable{
 	 * @return the codProd
 	 */
 	public Producto getCodProd() {
-		return codProd;
+		return codProducto;
 	}
 
 	/**
 	 * @param codProd the codProd to set
 	 */
 	public void setCodProd(Producto codProd) {
-		this.codProd = codProd;
+		this.codProducto = codProd;
 	}
 
 	/**
