@@ -33,7 +33,7 @@ public class PedidoProductoServiceImpl implements PedidoProductoService{
 	ProductoRepository productoRepository;
 
 	/**
-	 * Metedo que realiza insert en la base de datos simpre y cuando no se produzca un error.
+	 * Metedo que realiza insert en la base de datos siempre y cuando no se produzca un error.
 	 * @param carritoLleno
 	 * @param usuarioActual
 	 */
