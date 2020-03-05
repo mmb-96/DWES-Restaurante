@@ -21,8 +21,8 @@ public class EmailServiceImpl implements EmailService {
     public void enviarCorreo(String destinatario) {
         SimpleMailMessage message = new SimpleMailMessage(); 
         message.setTo(destinatario); 
-        message.setSubject("Prueba"); 
-        message.setText("asdasd");
+        message.setSubject("Pedido realizado"); 
+        message.setText("Su pedido se ha realizado correctamente");
         emailSender.send(message);
 
     }
